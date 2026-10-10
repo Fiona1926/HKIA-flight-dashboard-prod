@@ -1,0 +1,25 @@
+name: Daily flight fetch
+
+on:
+  schedule:
+    - cron: "0 2 * * *"   # 16:00 UTC = 00:00 HKT
+  workflow_dispatch:        # allow manual runs from the Actions tab
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Fetch flights into MongoDB
+        run: python -m src.daily_job
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}

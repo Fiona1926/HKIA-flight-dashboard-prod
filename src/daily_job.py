@@ -7,7 +7,7 @@ from src.db import ensure_indexes
 from src.main import run
 
 '''
-daily job for Heroku Scheduler (replaces scripts/dailyfetch.sh)
+daily job for (replaces scripts/dailyfetch.sh)
 fetches HK yesterday -> today + 2 days, for cargo arrivals and departures
 run with: python -m src.daily_job
 '''
