@@ -6,7 +6,7 @@ A dashboard that tracks **cargo flights at Hong Kong International Airport (HKIA
 
 It focuses on the routes that **Cathay Pacific (CX)** also serves, so you can see how other cargo airlines are performing on the same routes.
 
-👉 **[Open the live dashboard](https://your-app.streamlit.app)**👈
+👉 **[Open the live dashboard](https://hkia-flight-dashboard-app-5ckcdpjpbcjpiex5cr3y2n.streamlit.app/)**👈
 
 ## 📸 Dashboard preview
 
